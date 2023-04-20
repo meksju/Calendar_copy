@@ -15,9 +15,9 @@ const EventCalendar: React.FC = () => {
 
   const renderEventContent = (eventInfo: any) => {
     return (
-      <Box component="span" textAlign='center' paddingX={1} paddingY={1} sx={{backgroundColor:eventInfo.backgroundColor, width:"100%", height:'100%', borderRadius: '16px'}}>
-        <Typography variant="subtitle2">{eventInfo.timeText}</Typography>
-        <Typography variant="subtitle2" sx={{fontStyle: 'italic'}}>{eventInfo.event.title}</Typography>
+      <Box component="div" textAlign='center' sx={{backgroundColor:eventInfo.backgroundColor, paddingX: 1, width:"100%", height:'100%', borderRadius: '16px'}}>
+        <Typography variant="subtitle2" sx={{textOverflow: 'ellipsis',  overflow: 'hidden' }}>{eventInfo.timeText}</Typography>
+        <Typography variant="subtitle2" sx={{textOverflow: 'ellipsis',  overflow: 'hidden', fontStyle: 'italic'}}>{eventInfo.event.title}</Typography>
       </Box>
     )
   }
